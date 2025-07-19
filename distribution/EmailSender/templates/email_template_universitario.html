@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITULO_PRINCIPAL}}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .email-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        .content {
+            padding: 30px 20px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .student-info {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .info-row {
+            margin: 8px 0;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .message-content {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>{{TITULO_PRINCIPAL}}</h1>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                ¡Hola, {{NOMBRES}} {{APELLIDOS}}!
+            </div>
+            
+            <div class="student-info">
+                <h3 style="margin-top: 0; color: #2c3e50;">Información del Estudiante</h3>
+                <div class="info-row">
+                    <span class="info-label">Nombre completo:</span> {{NOMBRE_COMPLETO}}
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Facultad:</span> {{FACULTAD}}
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Escuela:</span> {{ESCUELA}}
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Código Universitario:</span> {{CODIGO_UNIVERSITARIO}}
+                </div>
+            </div>
+            
+            <div class="message-content">
+                {{MENSAJE_PRINCIPAL}}
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="#" class="cta-button">Más Información</a>
+            </div>
+            
+            <div class="signature">
+                Atentamente,<br>
+                <strong>{{NOMBRE_REMITENTE}}</strong>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Este es un mensaje oficial de la universidad.</p>
+            <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
+        </div>
+    </div>
+</body>
+</html>

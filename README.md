@@ -1,6 +1,20 @@
 # python-send-mail
 python-send-mail es una aplicación sencilla y eficiente desarrollada en Python que permite el envío automatizado de correos electrónicos a través del protocolo SMTP. 
 
+**Ahora disponible en dos versiones:**
+- **Versión de línea de comandos** (`index.py`): Para uso automatizado y scripts
+- **Versión de escritorio** (`app.py`): Interfaz gráfica completa para gestión visual de correos
+
+## 🚀 Características de la Aplicación de Escritorio (app.py)
+
+- **Vista previa de correos**: Visualiza todos los correos con filtros por rango
+- **Gestión completa de datos**: Agregar, editar y eliminar correos individualmente
+- **Importación masiva**: Pega listas de correos para importar en lote
+- **Envío controlado**: Selecciona rangos específicos para envío
+- **Plantillas HTML**: Soporte completo para plantillas personalizadas
+- **Log en tiempo real**: Monitoreo del proceso de envío
+- **Configuración integrada**: Gestión de credenciales desde la interfaz 
+
 # Paso 01: Clonar este repositorio
 ```sh
 git clone https://github.com/Rodrious73/python-send-mail.git
@@ -59,7 +73,47 @@ Dependiendo la cantidad de correos que hay en el Excel, sera la cantidad de envi
 # Recomendaciones: Cambiar los mensajes por default en el archivo index.py
 ![image](https://github.com/user-attachments/assets/cf715357-39d4-4fa9-913d-27b05f012cb6)
 
-# Paso 11: Ejecutar el archivo index.py
+# Paso 11: Ejecutar la aplicación
+
+## Versión de Escritorio (Recomendada)
+```sh
+python app.py
+```
+
+## Versión de Línea de Comandos
 ```sh
 python index.py
 ```
+
+## 📱 Uso de la Aplicación de Escritorio
+
+### Pestaña "Vista Previa de Correos"
+- Selecciona rangos de correos para visualizar (ej: 1-50, 51-100)
+- Ve un resumen de todos los correos con nombres, emails, asuntos y mensajes
+- Haz clic en cualquier correo para ver los detalles completos
+
+### Pestaña "Gestión de Datos"
+- **Agregar individual**: Completa los campos y presiona "Agregar"
+- **Editar**: Selecciona un correo de la vista previa, modifica los campos y presiona "Actualizar"
+- **Eliminar**: Selecciona un correo y presiona "Eliminar"
+- **Importación masiva**: Pega una lista de emails (uno por línea) y presiona "Importar"
+- **Guardar**: Presiona "Guardar Cambios" para actualizar el archivo Excel
+
+### Pestaña "Envío de Correos"
+- Selecciona el rango de correos a enviar
+- Activa/desactiva el uso de plantillas HTML
+- Usa "Envío de Prueba" para probar con el primer correo
+- Monitorea el progreso en tiempo real con la barra de progreso y log
+
+### Pestaña "Configuración"
+- Configura tus credenciales de correo
+- Selecciona plantillas HTML personalizadas
+- Prueba la conexión con el servidor
+
+## 🎯 Ventajas de la Versión de Escritorio
+- **Visualización completa**: Ve todos tus correos antes de enviar
+- **Control granular**: Envía rangos específicos de correos
+- **Gestión visual**: Agrega, edita y elimina correos con facilidad
+- **Importación rápida**: Pega listas completas de emails
+- **Monitoreo en tiempo real**: Ve el progreso del envío
+- **Sin necesidad de editar código**: Todo se gestiona desde la interfaz
